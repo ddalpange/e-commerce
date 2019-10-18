@@ -1,0 +1,6 @@
+{
+  "extends": "@class101/tslint-config",
+  "rules": {
+    "interface-name": false
+  }
+}
