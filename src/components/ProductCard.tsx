@@ -10,16 +10,28 @@ interface Props {
 }
 
 const ProductCard: React.FC<Props> = ({ product, className }) => {
-  const { title, thumbnail, listPrice, netPrice } = product;
+  const { title, thumbnail, listPrice, netPrice, id } = product;
   return (
-    <Card className={className} coverImage={thumbnail} coverImageRatio={CoverRatio.RATIO_4X3} title={title}>
+    <StyledCard
+      to={`/products/${id}`}
+      className={className}
+      coverImage={thumbnail}
+      coverImageRatio={CoverRatio.RATIO_4X3}
+      title={title}
+    >
       {listPrice && netPrice && <ListPrice>{listPrice.toLocaleString()}원</ListPrice>}
       {<NetPrice discounted={!!(listPrice && netPrice)}>{(netPrice || listPrice || 0).toLocaleString()}원</NetPrice>}
-    </Card>
+    </StyledCard>
   );
 };
 
 export default ProductCard;
+
+const StyledCard = styled(Card)`
+  &:hover {
+    cursor: pointer;
+  }
+`;
 
 const ListPrice = styled(Caption1)`
   text-decoration: line-through;

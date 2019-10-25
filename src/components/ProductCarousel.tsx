@@ -1,5 +1,6 @@
-import { Carousel, CarouselNavigationPosition, Slide } from '@class101/ui';
+import { BreakPoints, Carousel, CarouselNavigationPosition, Slide } from '@class101/ui';
 import React from 'react';
+import styled from 'styled-components';
 
 import { IProduct } from '../interaces/IProduct';
 import ProductCard from './ProductCard';
@@ -11,10 +12,11 @@ interface Props {
 
 const ProductCarousel: React.FC<Props> = ({ products, className }) => {
   return (
-    <Carousel
+    <StyledCarousel
       className={className}
       smSlidesPerView={2}
       lgSlidesPerView={4}
+      smSlidesSideOffset={24}
       swiperProps={{ freeMode: false }}
       navigationPosition={CarouselNavigationPosition.TopRightOut}
       navigation
@@ -25,8 +27,15 @@ const ProductCarousel: React.FC<Props> = ({ products, className }) => {
           <ProductCard product={product} />
         </Slide>
       ))}
-    </Carousel>
+    </StyledCarousel>
   );
 };
 
 export default ProductCarousel;
+
+const StyledCarousel = styled(Carousel)`
+  ${BreakPoints.media.sm`
+    margin-left: -24px;
+    margin-right: -24px;
+  `}
+`;

@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@class101/ui": "7.0.0-test-swiper10",
+    "@class101/ui": "^7.0.0-rc45",
     "classnames": "^2.2.6",
     "lodash": "^4.17.15",
     "react": "^16.10.2",
@@ -42,6 +42,8 @@
     "@types/node": "12.11.1",
     "@types/react": "16.9.9",
     "@types/react-dom": "16.9.2",
+    "@types/react-router": "^5.1.2",
+    "@types/react-router-dom": "^5.1.0",
     "@types/styled-components": "^4.1.19",
     "eslint": "^6.5.1",
     "eslint-config-prettier": "^6.4.0",

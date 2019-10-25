@@ -2,12 +2,12 @@ import React from 'react';
 import styled from 'styled-components';
 
 interface Props extends React.ImgHTMLAttributes<any> {
-  ratio: number;
+  ratio?: number;
 }
 
 export default class Img extends React.Component<Props> {
   public static readonly defaultProps: Partial<Props> = {
-    ratio: 9 / 16,
+    ratio: 9 / 21,
   };
 
   render() {
@@ -20,15 +20,14 @@ export default class Img extends React.Component<Props> {
   }
 }
 
-interface ImageContainerProps {
-  ratio: number;
-}
+type ImageContainerProps = Pick<Props, 'ratio'>;
+
 const ImageContainer = styled.span<ImageContainerProps>`
   display: block;
   position: relative;
   overflow: hidden;
   background: rgba(0, 0, 0, 0.2);
-  ${({ ratio }) => ratio > 0 && `padding-top: ${ratio * 100}%`};
+  ${({ ratio }) => ratio && ratio > 0 && `padding-top: ${ratio * 100}%`};
 `;
 const Image = styled.img`
   position: absolute;

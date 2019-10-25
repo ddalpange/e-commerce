@@ -24,9 +24,12 @@ export const MOCK_HERO_BANNERS: IHeroBanner[] = [
 
 export const MOCK_PRODUCTS: IProduct[] = [
   {
+    id: '3242343424324',
     title: '수채화 컬러링 북 세트',
     thumbnail: 'http://hobbyinthebox.co.kr/web/product/medium/201901/b5490a8b381bab6568239f751456a55d.jpg',
+    description: `<p></p><div style="text-align: center;"><img alt="" style="font-size: 9pt;" src="/web/upload/NNEditor/20190722/플라밍고시리즈-상세1_shop1_105603.jpg"></div><p>&nbsp;</p><div style="text-align: center;"><img alt="" style="font-size: 9pt;" src="/web/upload/NNEditor/20190722/플라밍고시리즈-상세2_shop1_105603.jpg"></div><p>&nbsp;</p><div style="text-align: center;"><img alt="" style="font-size: 9pt;" src="/web/upload/NNEditor/20190722/플라밍고시리즈-상세3_shop1_105604.jpg"></div><p>&nbsp;</p><div style="text-align: center;"><img alt="" style="font-size: 9pt;" src="/web/upload/NNEditor/20190722/플라밍고시리즈-상세4_shop1_105604.jpg"></div><p>&nbsp;</p><br><p></p>`,
     listPrice: 29000,
+    netPrice: 23000,
   },
   {
     title: '꼬마 공룡비누 만들기 세트 DIY KIT 취미 박스',
