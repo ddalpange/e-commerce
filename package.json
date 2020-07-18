@@ -5,7 +5,7 @@
   "dependencies": {
     "@class101/ui": "^7.0.0-rc45",
     "classnames": "^2.2.6",
-    "lodash": "^4.17.15",
+    "lodash": "^4.17.19",
     "react": "^16.10.2",
     "react-dom": "^16.10.2",
     "react-router": "^5.1.2",
